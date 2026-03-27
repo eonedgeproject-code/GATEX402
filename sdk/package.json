@@ -1,0 +1,56 @@
+{
+  "name": "@gatex402/checkout",
+  "version": "1.0.0",
+  "description": "x402 Payment Gateway SDK for Solana — one-line payment integration for dApps, AI agents, and marketplaces",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "gatex402": "./dist/cli/index.mjs"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./headless": {
+      "import": "./dist/headless/index.mjs",
+      "require": "./dist/headless/index.js",
+      "types": "./dist/headless/index.d.ts"
+    },
+    "./micro": {
+      "import": "./dist/micro/index.mjs",
+      "require": "./dist/micro/index.js",
+      "types": "./dist/micro/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/headless/index.ts src/micro/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "lint": "eslint src/",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["solana","x402","payment","gateway","checkout","agent","ai","web3","spl","defi"],
+  "author": "GATEX402",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eonedgeproject-code/GATEX402.git"
+  },
+  "homepage": "https://gatex402.com",
+  "dependencies": {
+    "@solana/web3.js": "^1.95.0",
+    "@solana/spl-token": "^0.4.0",
+    "bs58": "^6.0.0",
+    "eventemitter3": "^5.0.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "engines": { "node": ">=18" },
+  "files": ["dist", "README.md", "LICENSE"]
+}
