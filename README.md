@@ -72,10 +72,9 @@ gate.on('confirmed', (tx) => console.log(tx.signature, tx.riskScore))
 
 ## Links
 
-- Website: [gatex402.com](https://gatex402.com)
+- Website: [gatex402.com](https://gatex402.xyz)
 - Twitter: [@GATEX402_](https://x.com/GATEX402_)
 - npm: [@gatex402/checkout](https://www.npmjs.com/package/@gatex402/checkout)
-- XVA-402: [xva-402.com](https://xva-402.com)
 
 ## License
 
